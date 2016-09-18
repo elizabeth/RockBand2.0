@@ -227,6 +227,18 @@ public class PianoFunction extends AppCompatActivity{
         LinearLayout ll = (LinearLayout) findViewById(R.id.screen);
         ll.setBackgroundDrawable(new BitmapDrawable(bg));
 
+        Bars a= new Bars("a", 0,0);
+        /**Bars b= new Bar('b',0,0);
+        Bars c= new Bar('c',0,0);
+        Bars d= new Bar('d'0,0);
+        Bars e= new Bar('e',0,0);
+        Bars f= new Bar('f',0,0);
+        Bars g= new Bar('g',0,0);
+        **/
+
+
+
+
 
 
 //        final Button multi = (Button) findViewById(R.id.multi_button);

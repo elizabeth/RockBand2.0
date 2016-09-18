@@ -20,20 +20,25 @@ public class Bars extends AppCompatActivity {
 
     private String name;
     private ArrayList<Integer> timings= new ArrayList<>();
+    private int xcoord;
+    private int ycoord;
 
-    public Bars(String note){
+
+    public Bars(String note, int x, int y){
         name=note;
+        xcoord=x;
+        ycoord=y;
     }
 
     public String name(){
         return name;
     }
 
-    public void DataCreation(){
+    public void DataCreation(int resourceID){
         timings.clear();
         Context context = this;
         Resources res=getResources();
-        InputStream is = res.openRawResource(R.raw.songs);
+        InputStream is = res.openRawResource(resourceID);
         BufferedReader br = new BufferedReader(new InputStreamReader(is));
         String readLine = null;
 
@@ -48,6 +53,15 @@ public class Bars extends AppCompatActivity {
 
     public ArrayList<Integer> integerList(){
         return timings;
+    }
+
+    public void setycoord(int y){
+        ycoord=y;
+    }
+
+    public void setxcoord (int x){
+        xcoord=x;
+
     }
 
 }
