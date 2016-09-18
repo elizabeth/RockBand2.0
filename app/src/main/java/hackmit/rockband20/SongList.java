@@ -1,6 +1,7 @@
 package hackmit.rockband20;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.res.AssetManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -68,6 +69,15 @@ public class SongList extends AppCompatActivity {
         //support ListView or GridView
         AdapterView listView = (AdapterView)findViewById(R.id.listView);
         listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                Intent intent = new Intent(SongList.this, PlayerScreen.class);
+//                intent.putExtra(EXTRA_MESSAGE, message);
+                startActivity(intent);
+            }
+        });
 
         getData();
     }
