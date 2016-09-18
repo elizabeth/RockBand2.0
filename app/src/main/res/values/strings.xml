@@ -4,4 +4,7 @@
     <string name="start_button">Start</string>
     <string name="title">Rock Band\n2.0</string>
     <string name="title_activity_song_list">song_list</string>
+    <string name="title_activity_player_screen">PlayerScreen</string>
+    <string name="single_button">Single Player</string>
+    <string name="multi_button">Multiplayer</string>
 </resources>

@@ -1,26 +1,21 @@
 package hackmit.rockband20;
 
-import android.content.Context;
-import android.content.res.AssetManager;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.TextView;
+import android.widget.Button;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-
-public class SongList extends AppCompatActivity {
-    private ArrayAdapter<String> adapter;   // holds the list of forecast to display each of
+public class PlayerScreen extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         final View decorView = getWindow().getDecorView();
 
         decorView.setSystemUiVisibility(
@@ -59,35 +54,25 @@ public class SongList extends AppCompatActivity {
             actionBar.hide();
         }
 
-        setContentView(R.layout.activity_song_list);
+        setContentView(R.layout.activity_player_screen);
 
-        //controller
-        adapter = new ArrayAdapter<>(
-                this, R.layout.song_item, R.id.songItem);
-
-        //support ListView or GridView
-        AdapterView listView = (AdapterView)findViewById(R.id.listView);
-        listView.setAdapter(adapter);
-
-        getData();
-    }
-
-    public void getData() {
-        // clears any previous list of song data
-        adapter.clear();
-        Context context = this;
-
-        InputStream is = context.getResources().openRawResource(R.raw.songs);
-        BufferedReader br = new BufferedReader(new InputStreamReader(is));
-        String readLine = null;
-
-        try {
-            while ((readLine = br.readLine()) != null) {
-                adapter.add(readLine);
+        final Button single = (Button) findViewById(R.id.single_button);
+        single.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                // Switch to next activity
+                Intent intent = new Intent(PlayerScreen.this, SongList.class);
+                startActivity(intent);
             }
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        });
+
+//        final Button multi = (Button) findViewById(R.id.multi_button);
+//        multi.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                // Switch to next activity
+//                Intent intent = new Intent(PlayerScreen.this, SongList.class);
+//                startActivity(intent);
+//            }
+//        });
     }
 
 }
