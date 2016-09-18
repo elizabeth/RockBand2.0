@@ -1,6 +1,7 @@
 package hackmit.rockband20;
 
 
+import android.media.MediaDataSource;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -56,18 +57,22 @@ public class PianoFunction extends AppCompatActivity{
             actionBar.hide();
         }
 
-        setContentView(R.layout.Piano);
+        setContentView(R.layout.piano);
 
         final Button cnote = (Button) findViewById(R.id.button4);
-        final MediaPlayer notec = MediaPlayer.create(this, R.raw.c_note);
 
         cnote.setOnTouchListener(new View.OnTouchListener() {
-            @Override
+
             public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer notec = MediaPlayer.create(PianoFunction.this, R.raw.c_note);
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     notec.start();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     notec.pause();
+                    notec.stop();
+                    notec.release();
+                    notec = MediaPlayer.create(PianoFunction.this, R.raw.c_note);
+
                 }
                 return false;
             }
@@ -75,15 +80,19 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button dnote = (Button) findViewById(R.id.button5);
-        final MediaPlayer noted = MediaPlayer.create(this, R.raw.d_note);
 
         dnote.setOnTouchListener(new View.OnTouchListener() {
-            @Override
+
             public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer noted = MediaPlayer.create(PianoFunction.this, R.raw.d_note);
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     noted.start();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     noted.pause();
+                    noted.stop();
+                    noted.release();
+                    noted = MediaPlayer.create(PianoFunction.this, R.raw.d_note);
+
                 }
                 return false;
             }
@@ -91,15 +100,19 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button enote = (Button) findViewById(R.id.button6);
-        final MediaPlayer notee = MediaPlayer.create(this, R.raw.e_note);
 
-        cnote.setOnTouchListener(new View.OnTouchListener() {
-            @Override
+        enote.setOnTouchListener(new View.OnTouchListener() {
+
             public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer notee = MediaPlayer.create(PianoFunction.this, R.raw.e_note);
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     notee.start();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     notee.pause();
+                    notee.stop();
+                    notee.release();
+                    notee = MediaPlayer.create(PianoFunction.this, R.raw.e_note);
+
                 }
                 return false;
             }
@@ -107,15 +120,20 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button fnote = (Button) findViewById(R.id.button7);
-        final MediaPlayer notef = MediaPlayer.create(this, R.raw.f_note);
+        MediaPlayer notef = MediaPlayer.create(PianoFunction.this, R.raw.f_note);
 
-        cnote.setOnTouchListener(new View.OnTouchListener() {
-            @Override
+        fnote.setOnTouchListener(new View.OnTouchListener() {
+
             public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer notef = MediaPlayer.create(PianoFunction.this, R.raw.f_note);
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     notef.start();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     notef.pause();
+                    notef.stop();
+                    notef.release();
+                    notef = MediaPlayer.create(PianoFunction.this, R.raw.f_note);
+
                 }
                 return false;
             }
@@ -123,15 +141,20 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button gnote = (Button) findViewById(R.id.button8);
-        final MediaPlayer noteg = MediaPlayer.create(this, R.raw.g_note);
+        MediaPlayer noteg = MediaPlayer.create(this, R.raw.g_note);
 
-        cnote.setOnTouchListener(new View.OnTouchListener() {
-            @Override
+        gnote.setOnTouchListener(new View.OnTouchListener() {
+
             public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer noteg = MediaPlayer.create(PianoFunction.this, R.raw.g_note);
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     noteg.start();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     noteg.pause();
+                    noteg.stop();
+                    noteg.release();
+                    noteg = MediaPlayer.create(PianoFunction.this, R.raw.g_note);
+
                 }
                 return false;
             }
@@ -139,15 +162,20 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button anote = (Button) findViewById(R.id.button9);
-        final MediaPlayer notea = MediaPlayer.create(this, R.raw.a_note);
 
-        cnote.setOnTouchListener(new View.OnTouchListener() {
-            @Override
+
+        anote.setOnTouchListener(new View.OnTouchListener() {
+
             public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer notea = MediaPlayer.create(PianoFunction.this, R.raw.a_note);
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     notea.start();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     notea.pause();
+                    notea.stop();
+                    notea.release();
+                    notea = MediaPlayer.create(PianoFunction.this, R.raw.a_note);
+
                 }
                 return false;
             }
@@ -155,15 +183,24 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button bnote = (Button) findViewById(R.id.button10);
-        final MediaPlayer noteb = MediaPlayer.create(this, R.raw.b_note);
 
-        cnote.setOnTouchListener(new View.OnTouchListener() {
-            @Override
+
+        bnote.setOnTouchListener(new View.OnTouchListener() {
+
             public boolean onTouch(View v, MotionEvent event) {
+                MediaPlayer noteb = MediaPlayer.create(PianoFunction.this, R.raw.b_note);
                 if(event.getAction() == MotionEvent.ACTION_DOWN) {
                     noteb.start();
                 } else if (event.getAction() == MotionEvent.ACTION_UP) {
                     noteb.pause();
+                    noteb.stop();
+                    noteb.release();
+
+                    noteb=MediaPlayer.create(PianoFunction.this, R.raw.b_note);
+
+
+
+
                 }
                 return false;
             }
