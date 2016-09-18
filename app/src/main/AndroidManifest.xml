@@ -29,6 +29,10 @@
             android:label="@string/title_activity_player_screen"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".PianoFunction"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>
