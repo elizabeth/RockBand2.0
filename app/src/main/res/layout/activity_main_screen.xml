@@ -2,12 +2,13 @@
              xmlns:tools="http://schemas.android.com/tools"
              android:layout_width="match_parent"
              android:layout_height="match_parent"
-             android:background="#0099cc"
+             android:background="@drawable/background"
              tools:context="hackmit.rockband20.MainScreen">
 
     <!-- The primary full-screen view. This can be replaced with whatever view
          is needed to present your content, e.g. VideoView, SurfaceView,
          TextureView, etc. -->
+
     <TextView
         android:id="@+id/fullscreen_content"
         android:layout_width="match_parent"
@@ -19,13 +20,19 @@
         android:textSize="50sp"
         android:textStyle="bold"/>
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/logo"
+        android:adjustViewBounds="true"
+        android:layout_gravity="center"/>
+
     <Button
         android:id="@+id/start_button"
         android:layout_width="100dp"
         android:layout_height="50dp"
-        android:layout_weight="1"
         android:text="@string/start_button"
         android:layout_gravity="center_horizontal|bottom"
-        android:layout_marginBottom="150dp"/>
+        android:layout_marginBottom="35dp"/>
 
 </FrameLayout>

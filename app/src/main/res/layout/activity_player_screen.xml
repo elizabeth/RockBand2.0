@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
+    android:background="@drawable/background_faded"
     tools:context="hackmit.rockband20.PlayerScreen">
 
     <include layout="@layout/content_player_screen"/>
