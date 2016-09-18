@@ -21,6 +21,8 @@
         android:layout_gravity="center_horizontal|bottom"
         android:layout_above="@+id/multi_button"
         android:layout_centerHorizontal="true"
+        android:textSize="20sp"
+        android:textColor="#fff"
         android:background="@android:color/transparent"/>
 
     <Button
@@ -33,6 +35,8 @@
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/single_button"
         android:layout_alignStart="@+id/single_button"
+        android:textSize="20sp"
+        android:textColor="#808080"
         android:background="@android:color/transparent"/>
 
 
