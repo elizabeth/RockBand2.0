@@ -241,6 +241,8 @@ public class PianoFunction extends AppCompatActivity{
 
 
 
+
+
 //        final Button multi = (Button) findViewById(R.id.multi_button);
 //        multi.setOnClickListener(new View.OnClickListener() {
 //            public void onClick(View v) {
@@ -254,4 +256,8 @@ public class PianoFunction extends AppCompatActivity{
     }
 
 
+
+
 }
+
+//class BarDrawn()
