@@ -24,6 +24,11 @@
             android:label="@string/title_activity_song_list"
             android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity
+            android:name=".PlayerScreen"
+            android:label="@string/title_activity_player_screen"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
     </application>
 
 </manifest>

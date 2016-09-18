@@ -94,11 +94,11 @@ public class MainScreen extends AppCompatActivity {
 //        mControlsView = findViewById(R.id.fullscreen_content_controls);
         mContentView = findViewById(R.id.fullscreen_content);
 
-        final Button button = (Button) findViewById(R.id.start_button);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button start = (Button) findViewById(R.id.start_button);
+        start.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 // Switch to next activity
-                Intent intent = new Intent(MainScreen.this, SongList.class);
+                Intent intent = new Intent(MainScreen.this, PlayerScreen.class);
                 startActivity(intent);
             }
         });
