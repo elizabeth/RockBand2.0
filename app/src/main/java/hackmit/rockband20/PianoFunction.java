@@ -1,14 +1,26 @@
 package hackmit.rockband20;
 
 
+import android.content.Context;
 import android.media.MediaDataSource;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.view.MotionEvent;
+import android.app.Activity;
+import android.graphics.Bitmap;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.drawable.BitmapDrawable;
+import android.os.Bundle;
+import android.view.Menu;
+import android.widget.LinearLayout;
 
 /**
  * Created by Fate on 9/17/2016.
@@ -120,7 +132,6 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button fnote = (Button) findViewById(R.id.button7);
-        MediaPlayer notef = MediaPlayer.create(PianoFunction.this, R.raw.f_note);
 
         fnote.setOnTouchListener(new View.OnTouchListener() {
 
@@ -141,7 +152,6 @@ public class PianoFunction extends AppCompatActivity{
         });
 
         final Button gnote = (Button) findViewById(R.id.button8);
-        MediaPlayer noteg = MediaPlayer.create(this, R.raw.g_note);
 
         gnote.setOnTouchListener(new View.OnTouchListener() {
 
@@ -207,6 +217,16 @@ public class PianoFunction extends AppCompatActivity{
 
         });
 
+        //WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+
+        Paint paint = new Paint();
+        paint.setColor(Color.parseColor("#CD5C5C"));
+        Bitmap bg = Bitmap.createBitmap(480, 800, Bitmap.Config.ARGB_8888);
+        Canvas canvas = new Canvas(bg);
+        canvas.drawRect(-999, 600, 9999, 605, paint);
+        LinearLayout ll = (LinearLayout) findViewById(R.id.screen);
+        ll.setBackgroundDrawable(new BitmapDrawable(bg));
+
 
 
 //        final Button multi = (Button) findViewById(R.id.multi_button);
@@ -217,6 +237,9 @@ public class PianoFunction extends AppCompatActivity{
 //                startActivity(intent);
 //            }
 //        });
+
+
     }
+
 
 }

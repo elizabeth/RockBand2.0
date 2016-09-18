@@ -2,62 +2,91 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:id="@+id/screen">
 
     <Button
-        android:layout_width="63dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="New Button"
         android:id="@+id/button4"
         android:layout_gravity="left"
-        android:layout_weight="0.43" />
+        android:layout_weight="0.142857"
+        android:visibility="visible"
+        android:background="#00ffffff" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_gravity="bottom"></LinearLayout>
+    <!--<LinearLayout-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="bottom"></LinearLayout>-->
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="New Button"
         android:id="@+id/button5"
-        android:layout_gravity="left" />
+        android:layout_gravity="left"
+        android:layout_weight="0.142857"
+        android:visibility="visible"
+        android:background="#00ffffff" />
 
     <Button
-        android:layout_width="76dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="New Button"
         android:id="@+id/button6"
         android:layout_gravity="left"
-        android:layout_weight="0.46" />
+        android:layout_weight="0.142857"
+        android:visibility="visible"
+        android:background="#00ffffff" />
+
+    <!--<RelativeLayout-->
+        <!--android:id="@+id/my_relative_layout"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:src="@drawable/line"-->
+        <!--android:maxHeight="1dp"-->
+        <!--android:adjustViewBounds="true"-->
+        <!--android:layout_gravity="center" />-->
 
     <Button
-        android:layout_width="76dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="New Button"
         android:id="@+id/button7"
-        android:layout_gravity="left" />
+        android:layout_gravity="left"
+        android:layout_weight="0.142857"
+        android:visibility="visible"
+        android:background="#00ffffff" />
 
     <Button
-        android:layout_width="70dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="New Button"
         android:id="@+id/button8"
-        android:layout_gravity="left" />
+        android:layout_gravity="left"
+        android:layout_weight="0.142857"
+        android:visibility="visible"
+        android:background="#00ffffff" />
 
     <Button
-        android:layout_width="79dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="New Button"
         android:id="@+id/button9"
-        android:layout_gravity="left|bottom" />
+        android:layout_gravity="left|bottom"
+        android:layout_weight="0.142857"
+        android:visibility="visible"
+        android:background="#00ffffff" />
 
     <Button
-        android:layout_width="68dp"
+        android:layout_width="0dp"
         android:layout_height="match_parent"
-        android:text="New Button"
-        android:id="@+id/button10" />
+        android:id="@+id/button10"
+        android:layout_weight="0.142857"
+        android:visibility="visible"
+        android:background="#00ffffff" />
+
+
 
 </LinearLayout>
+
+
+
+
+
